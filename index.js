@@ -14,7 +14,7 @@ const openai = new OpenAI({
   baseURL: "https://integrate.api.nvidia.com/v1",
 });
 
-app.post("/", async (req, res) => {
+app.post("/api/chat-stream", async (req, res) => {
   try {
     res.setHeader("Content-Type", "text/event-stream");
     res.setHeader("Cache-Control", "no-cache");
